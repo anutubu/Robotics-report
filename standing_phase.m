@@ -56,22 +56,11 @@ Z=[z1,z2,z3,z1];
 for i=-0.5:-0.01:-1.5
     z10=i
     z11=i
-    
-   
-    
     plot3(X,Y,Z,'k-o','linewidth',3)
     hold on;
     plot3([x4,x10,x7],[y4,y10,y7],[z4,z10,z7],'r-o','LineWidth',5)
-    hold on
     plot3([x5,x11,x8],[y5,y11,y8],[z5,z11,z8],'r-o','LineWidth',5)
-    hold on
     plot3([x6,x12,x9],[y6,y12,y9],[z6,z12,z9],'r-o','LineWidth',5)
     hold off
-    hold off
-    hold off
-    
     pause(0.05)
-    
-    
-    
 end    
