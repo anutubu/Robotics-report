@@ -75,3 +75,31 @@ for i=-0.5:-0.01:-1.5
     
     
 end    
+hold on
+plot3(X,Y,Z,'k-o','LineWidth',3)
+hold on
+t=pi/6
+rotate=[[cos(t),0,-sin(t),0];[0,1,0,0];[sin(t),0,cos(t),0];[0,0,0,1]]
+bringback=[[1,0,0,-x9];[0,1,0,-y9];[0,0,1,-z9];[0,0,0,1]]
+bringback2=[[1,0,0,x9];[0,1,0,y9];[0,0,1,z9];[0,0,0,1]]
+
+platept_1=bringback2*rotate*bringback*platept_1
+platept_2=bringback2*rotate*bringback*platept_2
+platept_3=bringback2*rotate*bringback*platept_3
+x1=platept_1(1);
+y1=platept_1(2);
+z1=platept_1(3);
+x2=platept_2(1);
+y2=platept_2(2);
+z2=platept_2(3);
+x3=platept_3(1);
+y3=platept_3(2);
+z3=platept_3(3);
+X=[x1,x2,x3,x1];
+Y=[y1,y2,y3,y1];
+Z=[z1,z2,z3,z1];
+
+hippt_1=bringback2*rotate*bringback*hippt_1
+hippt_2=bringback2*rotate*bringback*hippt_2		
+hippt_3=bringback2*rotate*bringback*hippt_3				
+plot3(X,Y,Z,'r-o','LineWidth',3)
