@@ -73,7 +73,7 @@ for i=-0.5:-0.01:-1.5
    grid on;
    box on;
    axis equal;
-   view(45,45);
+   view(80,10);
     
     pause(0.01)
     
@@ -97,7 +97,7 @@ for i=-1.5:0.01:0.3125
     grid on;
     box on;
     axis equal;
-    view(45,45);
+    view(80,10);
    
     
     pause(0.01)
@@ -114,7 +114,7 @@ timespan=[t0:3:tf];
 sdot=@(t,s) [s(2);-t-s(1)-s(2)]
 [time,state_values]=ode45(sdot,timespan,IC);
 %plot(time,state_values(:,1))
-for t= 0:pi/350:pi/15
+for t= 0:pi/600:pi/60
 rotate=[[1,0,0,0];[0,cos(-t),-sin(-t),0];[0,sin(-t),cos(-t),0];[0,0,0,1]]
 bringback=[[1,0,0,-x9];[0,1,0,-y9];[0,0,1,-z9];[0,0,0,1]]
 bringback2=[[1,0,0,x9];[0,1,0,y9];[0,0,1,z9];[0,0,0,1]]
